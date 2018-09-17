@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DropboxTestingSuite]">
+  <parameter name="password" value="Qwerty123"/>
+  <parameter name="fileName" value="boats.jpg"/>
+  <parameter name="filePath" value="/files/"/>
+  <parameter name="login" value="https://www.dropbox.com/login"/>
+  <parameter name="email" value="vadym.butlerovskyi@gmail.com"/>
+  <parameter name="home" value="https://www.dropbox.com/h"/>
+  <test thread-count="5" name="UploadFileTest(failed)">
+    <classes>
+      <class name="tests.UploadFileTests">
+        <methods>
+          <include name="testAction" invocation-numbers="0"/>
+          <include name="cleanUp"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- tests.UploadFileTests -->
+    </classes>
+  </test> <!-- UploadFileTest(failed) -->
+</suite> <!-- Failed suite [DropboxTestingSuite] -->

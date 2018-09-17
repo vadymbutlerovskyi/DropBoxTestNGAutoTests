@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DropboxTestingSuite">
+    <parameter name="login"	value="https://www.dropbox.com/login" />
+	<parameter name="home" value="https://www.dropbox.com/h" />
+	<parameter name="email"	value="vadym.butlerovskyi@gmail.com" />
+	<parameter name="password" value="Qwerty123" />
+	<parameter name="filePath" value="/files/" />
+	<parameter name="fileName" value="boats.jpg" />
+	<test thread-count="3" name="UploadFileTest">
+		<classes>
+			<class name="tests.LoginLogoutPageTests">	    
+				<methods>
+					<include name="logIn" />
+					<exclude name="testAction" />
+				</methods>
+			</class>
+			<class name="tests.UploadFileTests">	    
+				<methods>
+					<include name="testAction" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- UploadFileTest -->
+	
+	
+</suite> <!-- DropboxTestingSuite -->
