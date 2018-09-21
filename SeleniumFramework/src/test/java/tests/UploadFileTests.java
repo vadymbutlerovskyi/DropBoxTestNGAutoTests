@@ -11,33 +11,34 @@ import pages.UploadFilePage;
 
 public class UploadFileTests extends BasePage {
 
-	@Parameters("password")
-	@Test
-	public void testAction(String pass) {
-		System.out.println("Inside testAction");
-		
-		BasePage.upload.enterIntoPassword(pass);
-		
-//		UploadFilePage loginLogout = new UploadFilePage(_driver);
-//		loginLogout.uploadFile("sdfsdf");
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	
-//	@Parameters({"filePath", "fileName"})
-//	@Test (priority = 1)	
-//	public void uploadFile (String filePath, String fileName) {
-//		String fileFullPath = System.getProperty("user.dir") + filePath + fileName;
-//		driver.findElement(By.xpath("//input[@type='file' and @style='display: none;']")).sendKeys(fileFullPath);
+//	@Parameters("password")
+//	@Test
+//	public void testAction(String pass) {
 //		
 //		
-//		//UploadFilePage upload = page.GetInstance(UploadFilePage.class);
 //		
-//		//upload.uploadFile(fileFullPath);
+//		
+////		UploadFilePage loginLogout = new UploadFilePage(_driver);
+////		loginLogout.uploadFile("sdfsdf");
+//		
 //	}
+	
+	
+	@Parameters({"filePath", "fileName", "folderName"})
+	@Test	
+	public void uploadFile (String filePath, String fileName, String folderName) {
+		BasePage.upload.waitForUploadZone();
+		String fileFullPath = System.getProperty("user.dir") + filePath + fileName;
+		BasePage.upload.uploadFile(fileFullPath);
+		BasePage.upload.waitForFoldersOnUploadDestinationModal();
+		BasePage.upload.selectUploadFolder(folderName);
+		BasePage.upload.hitUploadButton();
+		BasePage.upload.waitForFileUpload();
+		BasePage.upload.waitForFileToBeProcessed();
+		
+		
+		//UploadFilePage upload = page.GetInstance(UploadFilePage.class);
+		
+		//upload.uploadFile(fileFullPath);
+	}
 }

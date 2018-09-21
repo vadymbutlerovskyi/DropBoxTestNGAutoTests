@@ -3,7 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [DropboxTestingSuite]">
   <parameter name="password" value="Qwerty123"/>
   <parameter name="fileName" value="boats.jpg"/>
+  <parameter name="msgSuccessUndo" value="Undo complete."/>
   <parameter name="filePath" value="/files/"/>
+  <parameter name="msgSuccessDelete" value="Deleted 1 item. Undo"/>
+  <parameter name="msgNoResults" value="No results found"/>
+  <parameter name="folderName" value="TestFolder"/>
   <parameter name="login" value="https://www.dropbox.com/login"/>
   <parameter name="email" value="vadym.butlerovskyi@gmail.com"/>
   <parameter name="home" value="https://www.dropbox.com/h"/>
@@ -11,7 +15,7 @@
     <classes>
       <class name="tests.UploadFileTests">
         <methods>
-          <include name="testAction" invocation-numbers="0"/>
+          <include name="uploadFile" invocation-numbers="0"/>
           <include name="cleanUp"/>
           <include name="testSetup"/>
         </methods>

@@ -115,9 +115,9 @@ public class BaseTest {
         try {
         	new WebDriverWait(_driver, timeOut).until(
         	          webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-        	test.pass("The URL was succesfully loaded");
+        	//test.pass("The URL was succesfully loaded");
     	} catch (Throwable error) {
-    		test.fail("The URL failed to load. Current URL was: " + _driver.getCurrentUrl());
+    		//test.fail("The URL failed to load. Current URL was: " + _driver.getCurrentUrl());
         }
     }
 	

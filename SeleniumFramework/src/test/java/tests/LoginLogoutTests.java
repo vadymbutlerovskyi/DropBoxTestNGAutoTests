@@ -7,7 +7,7 @@ import pages.BasePage;
 import pages.LoginLogoutPage;
 import pages.UploadFilePage;
 
-public class LoginLogoutPageTests extends BasePage {
+public class LoginLogoutTests extends BasePage {
 	
 //	public LoginLogoutPageTests(WebDriver driver) {
 //		super(driver);
@@ -19,40 +19,39 @@ public class LoginLogoutPageTests extends BasePage {
 //		BasePage test = new BasePage();
 //		test.testSetup();
 		baseTest.goToUrl(login);
+		baseTest.waitForPageLoaded(5);
 		//LoginLogoutPage loginLogout = new LoginLogoutPage(_driver);
 		loginLogout.enterIntoEmail(email);
 //		loginLogout = page.GetInstance(LoginLogoutPage.class);
 //		goToUrl(login);
-//		waitForPageLoaded(5);
+
 //		loginLogout.enterIntoEmail(email);
 //		test.pass(email + " was entered into email field");
-//		loginLogout.enterIntoPassword(password);
+		loginLogout.enterIntoPassword(password);
 //		test.pass(password + " was entered into password field");		
-//		loginLogout.clickOnSignIn();
+		loginLogout.clickOnSignIn();
 //		test.pass("Clicked on the Sign In button");
-//		loginLogout.waitForRecentFiles();
+		loginLogout.waitForRecentFilesOnHomePage();
 //		test.info("Recent files are loaded");
-//		loginLogout.waitForAvatar();
+		loginLogout.waitForAvatar();
 //		test.info("Avatar is loaded");
-//		amIOnUrl(home);
+		baseTest.amIOnUrl(home);
 //		test.pass("Successfully signed in");
 	}
 	
-	@Parameters ("password")
+	@Parameters ("login")
 //	@Test (priority = 1)
 	@Test
-	public void testAction(String pass) {
-		upload.enterIntoPassword(pass);
-	}
+	public void logOut(String login) {
 //	public void logOut (String login) {
 //		LoginLogoutPage loginLogout;
-//		loginLogout = page.GetInstance(LoginLogoutPage.class);
-//		loginLogout.clickOnAvatarImg();
+		//loginLogout = page.GetInstance(LoginLogoutPage.class);
+		loginLogout.clickOnAvatarImg();
 //		test.pass("Clicked on the Avatar");
-//		loginLogout.clickOnSignOut();
+		loginLogout.clickOnSignOut();
 //		test.pass("Clicked on the Sign Out button");
-//		waitForPageLoaded(5);
-//		amIOnUrl(login);
+		baseTest.waitForPageLoaded(5);
+		baseTest.amIOnUrl(login);
 //		test.pass("Successfully signed out");
-//	}
+	}
 }

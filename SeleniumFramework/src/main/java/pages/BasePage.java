@@ -12,18 +12,20 @@ public class BasePage {
 	public BaseTest baseTest;
 	public LoginLogoutPage loginLogout;
 	public static UploadFilePage upload;
+	public static CreateNewFolderPage folder;
+	public static SearchAndDeleteFilePage deleteSought;
 	
 	@BeforeTest
 	public void testSetup(){
 		baseTest = new BaseTest();
 		loginLogout = new LoginLogoutPage(baseTest._driver);
 		upload = new UploadFilePage(baseTest._driver);
-		System.out.println("Inside Before Class");
+		folder = new CreateNewFolderPage(baseTest._driver);
+		deleteSought = new SearchAndDeleteFilePage(baseTest._driver);
 	}
 	
 	@AfterTest
 	public void cleanUp() {
-		System.out.println("Inside After Class");
 		baseTest.tearDown();
 	}
 	
