@@ -1,17 +1,13 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pages.BasePage;
-import pages.LoginLogoutPage;
-import pages.UploadFilePage;
 
 public class CreateNewFolderTests extends BasePage {
-	
+
 	@Parameters("folderName")
 	@Test	
 	public void createNewFolder (String folderName) {
@@ -25,6 +21,4 @@ public class CreateNewFolderTests extends BasePage {
 				"The element on the first name did not match created folder. Given: " + folderName
 				+ ". Found: " + nameFromFilesTableFirstRow);
 	}
-	
-	
 }

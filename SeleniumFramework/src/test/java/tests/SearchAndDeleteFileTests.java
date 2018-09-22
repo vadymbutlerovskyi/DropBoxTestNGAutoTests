@@ -7,14 +7,13 @@ import org.testng.annotations.Test;
 import pages.BasePage;
 
 public class SearchAndDeleteFileTests extends BasePage  {
-	
-	@Parameters({"fileName", "folderName", "msgSuccessDelete", "msgSuccessUndo", "msgNoResults"})
+
+	@Parameters({"fileName", "folderName", "msgSuccessDelete", "msgNoResults"})
 	@Test	
 	public void deleteItem (
 			String fileName, 
 			String folderName, 
-			String msgSuccessDelete, 
-			String msgSuccessUndo, 
+			String msgSuccessDelete,  
 			String msgNoResults) 
 	{
 		//Pass here the item to delete. It can be either a folder or a file
@@ -24,19 +23,23 @@ public class SearchAndDeleteFileTests extends BasePage  {
 		BasePage.deleteSought.hitDeleteButtonOnActionPanel();
 		BasePage.deleteSought.waitForDeleteButtonOnModal();
 		BasePage.deleteSought.hitDeleteButtonOnModal();
-		BasePage.deleteSought.waitForConfirmationMessage();
-		String result = BasePage.deleteSought.isConfirmationMessageShown(msgSuccessDelete);
-		Assert.assertEquals(result, msgSuccessDelete, "The confirmation message for success delete was not shown"); //put messages to Assertions!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		BasePage.deleteSought.waitForConfirmationMessage("Delete");
+		String result = BasePage.deleteSought.isConfirmationMessageShown(msgSuccessDelete, "Delete");
+		Assert.assertEquals(result, msgSuccessDelete, "The confirmation message for success delete was not shown");
 		result = BasePage.deleteSought.isNoResultMessageShown(msgNoResults);
 		Assert.assertEquals(result, msgNoResults, "The No Results message was not shown");
+		Boolean res = BasePage.deleteSought.isSoughtElementShown(folderName);
+		Assert.assertFalse(res, "The sought element was found after delete");
 	}
-	
-	@Parameters({"fileName", "folderName"})
+
+	@Parameters({"fileName", "folderName", "msgSuccessUndo"})
 	@Test
-	public void undoDelete(String fileName, String folderName) {
+	public void undoDelete(String fileName, String folderName, String msgSuccessUndo) {
 		BasePage.deleteSought.hitUndoButton();
-		BasePage.deleteSought.waitForConfirmationMessage();
-		Boolean result = BasePage.deleteSought.isSoughtElementShown(folderName);
-		Assert.assertTrue(result, "The sought element was not found after undo");
+		BasePage.deleteSought.waitForConfirmationMessage("Undo");
+		String result = BasePage.deleteSought.isConfirmationMessageShown(msgSuccessUndo, "Undo");
+		Assert.assertEquals(result, msgSuccessUndo, "The confirmation message for success undo was not shown");
+		Boolean _res = BasePage.deleteSought.isSoughtElementShown(folderName);
+		Assert.assertTrue(_res, "The sought element was not found after undo");
 	}
 }

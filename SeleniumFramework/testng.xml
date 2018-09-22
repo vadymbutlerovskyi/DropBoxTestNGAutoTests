@@ -58,6 +58,7 @@
 			</class>
 			<class name="tests.CreateNewFolderTests">	    
 				<methods>
+				    <!-- Or can be excluded if folder or file is already created -->
 					<include name="createNewFolder" />
 				</methods>
 			</class>

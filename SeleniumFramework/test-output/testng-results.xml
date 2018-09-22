@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="11" total="21" passed="10">
+<testng-results skipped="0" failed="0" ignored="19" total="29" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="DropboxTestingSuite" duration-ms="109056" started-at="2018-09-21T18:39:57Z" finished-at="2018-09-21T18:41:46Z">
+  <suite name="DropboxTestingSuite" duration-ms="103729" started-at="2018-09-22T17:57:37Z" finished-at="2018-09-22T17:59:21Z">
     <groups>
     </groups>
-    <test name="LogInLogOutTests" duration-ms="23973" started-at="2018-09-21T18:39:57Z" finished-at="2018-09-21T18:40:21Z">
+    <test name="LogInLogOutTests" duration-ms="23047" started-at="2018-09-22T17:57:37Z" finished-at="2018-09-22T17:58:00Z">
       <class name="tests.LoginLogoutTests">
-        <test-method status="PASS" signature="testSetup()[pri:0, instance:tests.LoginLogoutTests@42d80b78]" name="testSetup" is-config="true" duration-ms="4990" started-at="2018-09-21T18:39:57Z" finished-at="2018-09-21T18:40:02Z">
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.LoginLogoutTests@1bce4f0a]" name="testSetup" is-config="true" duration-ms="4417" started-at="2018-09-22T17:57:37Z" finished-at="2018-09-22T17:57:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@348d18a3]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@42d80b78]" name="logIn" duration-ms="11137" started-at="2018-09-21T18:40:02Z" finished-at="2018-09-21T18:40:13Z">
+        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@1bce4f0a]" name="logIn" duration-ms="10531" started-at="2018-09-22T17:57:41Z" finished-at="2018-09-22T17:57:52Z">
           <params>
             <param index="0">
               <value>
@@ -37,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="logOut(java.lang.String)[pri:0, instance:tests.LoginLogoutTests@42d80b78]" name="logOut" duration-ms="6930" started-at="2018-09-21T18:40:13Z" finished-at="2018-09-21T18:40:20Z">
+        <test-method status="PASS" signature="logOut(java.lang.String)[pri:0, instance:tests.LoginLogoutTests@1bce4f0a]" name="logOut" duration-ms="7293" started-at="2018-09-22T17:57:52Z" finished-at="2018-09-22T17:57:59Z">
           <params>
             <param index="0">
               <value>
@@ -48,19 +55,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@42d80b78]" name="cleanUp" is-config="true" duration-ms="889" started-at="2018-09-21T18:40:20Z" finished-at="2018-09-21T18:40:21Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@1bce4f0a]" name="cleanUp" is-config="true" duration-ms="789" started-at="2018-09-22T17:57:59Z" finished-at="2018-09-22T17:58:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
       </class> <!-- tests.LoginLogoutTests -->
     </test> <!-- LogInLogOutTests -->
-    <test name="UploadFileTest" duration-ms="25653" started-at="2018-09-21T18:40:21Z" finished-at="2018-09-21T18:40:46Z">
+    <test name="UploadFileTest" duration-ms="26911" started-at="2018-09-22T17:58:00Z" finished-at="2018-09-22T17:58:27Z">
       <class name="tests.LoginLogoutTests">
-        <test-method status="PASS" signature="testSetup()[pri:0, instance:tests.LoginLogoutTests@5f341870]" name="testSetup" is-config="true" duration-ms="3755" started-at="2018-09-21T18:40:21Z" finished-at="2018-09-21T18:40:25Z">
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.LoginLogoutTests@4f7d0008]" name="testSetup" is-config="true" duration-ms="3526" started-at="2018-09-22T17:58:00Z" finished-at="2018-09-22T17:58:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6c65860d]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@5f341870]" name="logIn" duration-ms="9300" started-at="2018-09-21T18:40:25Z" finished-at="2018-09-21T18:40:34Z">
+        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@4f7d0008]" name="logIn" duration-ms="10279" started-at="2018-09-22T17:58:04Z" finished-at="2018-09-22T17:58:14Z">
           <params>
             <param index="0">
               <value>
@@ -86,13 +100,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@5f341870]" name="cleanUp" is-config="true" duration-ms="857" started-at="2018-09-21T18:40:46Z" finished-at="2018-09-21T18:40:46Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@4f7d0008]" name="cleanUp" is-config="true" duration-ms="1038" started-at="2018-09-22T17:58:26Z" finished-at="2018-09-22T17:58:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
       </class> <!-- tests.LoginLogoutTests -->
       <class name="tests.UploadFileTests">
-        <test-method status="PASS" signature="uploadFile(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.UploadFileTests@553f17c]" name="uploadFile" duration-ms="11733" started-at="2018-09-21T18:40:34Z" finished-at="2018-09-21T18:40:46Z">
+        <test-method status="PASS" signature="uploadFile(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.UploadFileTests@271053e1]" name="uploadFile" duration-ms="12065" started-at="2018-09-22T17:58:14Z" finished-at="2018-09-22T17:58:26Z">
           <params>
             <param index="0">
               <value>
@@ -115,13 +129,20 @@
         </test-method> <!-- uploadFile -->
       </class> <!-- tests.UploadFileTests -->
     </test> <!-- UploadFileTest -->
-    <test name="CreateFolderTest" duration-ms="21730" started-at="2018-09-21T18:40:46Z" finished-at="2018-09-21T18:41:08Z">
+    <test name="CreateFolderTest" duration-ms="20232" started-at="2018-09-22T17:58:27Z" finished-at="2018-09-22T17:58:47Z">
       <class name="tests.LoginLogoutTests">
-        <test-method status="PASS" signature="testSetup()[pri:0, instance:tests.LoginLogoutTests@4cf777e8]" name="testSetup" is-config="true" duration-ms="3850" started-at="2018-09-21T18:40:46Z" finished-at="2018-09-21T18:40:50Z">
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.LoginLogoutTests@3fee9989]" name="testSetup" is-config="true" duration-ms="3540" started-at="2018-09-22T17:58:27Z" finished-at="2018-09-22T17:58:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2d000e80]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@4cf777e8]" name="logIn" duration-ms="9405" started-at="2018-09-21T18:40:50Z" finished-at="2018-09-21T18:41:00Z">
+        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@3fee9989]" name="logIn" duration-ms="10323" started-at="2018-09-22T17:58:30Z" finished-at="2018-09-22T17:58:41Z">
           <params>
             <param index="0">
               <value>
@@ -147,13 +168,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@4cf777e8]" name="cleanUp" is-config="true" duration-ms="892" started-at="2018-09-21T18:41:07Z" finished-at="2018-09-21T18:41:08Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@3fee9989]" name="cleanUp" is-config="true" duration-ms="781" started-at="2018-09-22T17:58:46Z" finished-at="2018-09-22T17:58:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
       </class> <!-- tests.LoginLogoutTests -->
       <class name="tests.CreateNewFolderTests">
-        <test-method status="PASS" signature="createNewFolder(java.lang.String)[pri:0, instance:tests.CreateNewFolderTests@2f686d1f]" name="createNewFolder" duration-ms="7578" started-at="2018-09-21T18:41:00Z" finished-at="2018-09-21T18:41:07Z">
+        <test-method status="PASS" signature="createNewFolder(java.lang.String)[pri:0, instance:tests.CreateNewFolderTests@73ad2d6]" name="createNewFolder" duration-ms="5584" started-at="2018-09-22T17:58:41Z" finished-at="2018-09-22T17:58:46Z">
           <params>
             <param index="0">
               <value>
@@ -166,13 +187,24 @@
         </test-method> <!-- createNewFolder -->
       </class> <!-- tests.CreateNewFolderTests -->
     </test> <!-- CreateFolderTest -->
-    <test name="SearchAndDelete" duration-ms="37616" started-at="2018-09-21T18:41:08Z" finished-at="2018-09-21T18:41:46Z">
+    <test name="SearchAndDelete" duration-ms="33466" started-at="2018-09-22T17:58:47Z" finished-at="2018-09-22T17:59:21Z">
       <class name="tests.LoginLogoutTests">
-        <test-method status="PASS" signature="testSetup()[pri:0, instance:tests.LoginLogoutTests@e45f292]" name="testSetup" is-config="true" duration-ms="3808" started-at="2018-09-21T18:41:08Z" finished-at="2018-09-21T18:41:12Z">
+        <test-method status="PASS" signature="extentReportSetup()[pri:0, instance:tests.LoginLogoutTests@31a5c39e]" name="extentReportSetup" is-config="true" duration-ms="167" started-at="2018-09-22T17:57:37Z" finished-at="2018-09-22T17:57:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportSetup -->
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.LoginLogoutTests@31a5c39e]" name="testSetup" is-config="true" duration-ms="3535" started-at="2018-09-22T17:58:47Z" finished-at="2018-09-22T17:58:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7cf283e1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@e45f292]" name="logIn" duration-ms="10479" started-at="2018-09-21T18:41:12Z" finished-at="2018-09-21T18:41:22Z">
+        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginLogoutTests@31a5c39e]" name="logIn" duration-ms="10643" started-at="2018-09-22T17:58:51Z" finished-at="2018-09-22T17:59:01Z">
           <params>
             <param index="0">
               <value>
@@ -198,13 +230,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@e45f292]" name="cleanUp" is-config="true" duration-ms="892" started-at="2018-09-21T18:41:45Z" finished-at="2018-09-21T18:41:46Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.LoginLogoutTests@31a5c39e]" name="cleanUp" is-config="true" duration-ms="780" started-at="2018-09-22T17:59:20Z" finished-at="2018-09-22T17:59:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.LoginLogoutTests@31a5c39e]" name="afterSuite" is-config="true" duration-ms="285" started-at="2018-09-22T17:59:21Z" finished-at="2018-09-22T17:59:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
       </class> <!-- tests.LoginLogoutTests -->
       <class name="tests.SearchAndDeleteFileTests">
-        <test-method status="PASS" signature="deleteItem(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SearchAndDeleteFileTests@31a5c39e]" name="deleteItem" duration-ms="8834" started-at="2018-09-21T18:41:30Z" finished-at="2018-09-21T18:41:39Z">
+        <test-method status="PASS" signature="deleteItem(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SearchAndDeleteFileTests@1e397ed7]" name="deleteItem" duration-ms="7762" started-at="2018-09-22T17:59:09Z" finished-at="2018-09-22T17:59:17Z">
           <params>
             <param index="0">
               <value>
@@ -223,11 +259,6 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Undo complete.]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
                 <![CDATA[No results found]]>
               </value>
             </param>
@@ -235,7 +266,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteItem -->
-        <test-method status="PASS" signature="undoDelete(java.lang.String, java.lang.String)[pri:0, instance:tests.SearchAndDeleteFileTests@31a5c39e]" name="undoDelete" duration-ms="5608" started-at="2018-09-21T18:41:39Z" finished-at="2018-09-21T18:41:45Z">
+        <test-method status="PASS" signature="undoDelete(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SearchAndDeleteFileTests@1e397ed7]" name="undoDelete" duration-ms="2774" started-at="2018-09-22T17:59:17Z" finished-at="2018-09-22T17:59:20Z">
           <params>
             <param index="0">
               <value>
@@ -247,13 +278,18 @@
                 <![CDATA[TestFolder]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Undo complete.]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- undoDelete -->
       </class> <!-- tests.SearchAndDeleteFileTests -->
       <class name="tests.CreateNewFolderTests">
-        <test-method status="PASS" signature="createNewFolder(java.lang.String)[pri:0, instance:tests.CreateNewFolderTests@5f2108b5]" name="createNewFolder" duration-ms="7990" started-at="2018-09-21T18:41:22Z" finished-at="2018-09-21T18:41:30Z">
+        <test-method status="PASS" signature="createNewFolder(java.lang.String)[pri:0, instance:tests.CreateNewFolderTests@3f49dace]" name="createNewFolder" duration-ms="7968" started-at="2018-09-22T17:59:01Z" finished-at="2018-09-22T17:59:09Z">
           <params>
             <param index="0">
               <value>

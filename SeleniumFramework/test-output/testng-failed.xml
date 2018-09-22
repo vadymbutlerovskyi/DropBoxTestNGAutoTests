@@ -11,15 +11,26 @@
   <parameter name="login" value="https://www.dropbox.com/login"/>
   <parameter name="email" value="vadym.butlerovskyi@gmail.com"/>
   <parameter name="home" value="https://www.dropbox.com/h"/>
-  <test thread-count="5" name="UploadFileTest(failed)">
+  <test thread-count="5" name="SearchAndDelete(failed)">
     <classes>
-      <class name="tests.UploadFileTests">
+      <class name="tests.CreateNewFolderTests">
         <methods>
-          <include name="uploadFile" invocation-numbers="0"/>
+          <include name="createNewFolder" invocation-numbers="0"/>
+          <include name="extentReportSetup"/>
+          <include name="afterSuite"/>
           <include name="cleanUp"/>
           <include name="testSetup"/>
         </methods>
-      </class> <!-- tests.UploadFileTests -->
+      </class> <!-- tests.CreateNewFolderTests -->
+      <class name="tests.SearchAndDeleteFileTests">
+        <methods>
+          <include name="extentReportSetup"/>
+          <include name="afterSuite"/>
+          <include name="cleanUp"/>
+          <include name="testSetup"/>
+          <include name="undoDelete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.SearchAndDeleteFileTests -->
     </classes>
-  </test> <!-- UploadFileTest(failed) -->
+  </test> <!-- SearchAndDelete(failed) -->
 </suite> <!-- Failed suite [DropboxTestingSuite] -->
