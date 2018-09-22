@@ -1,18 +1,13 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import config.PropertiesFile;
 
@@ -29,31 +24,6 @@ public class BaseTest {
 		_driver = driver;
 	}
 
-	//	public BaseTest() {
-	//		test.log(Status.INFO, "Test has started");
-	//		PropertiesFile.getProperties();
-	//		if(browser.equalsIgnoreCase("chrome")) {
-	//			driverPath = System.getProperty("user.dir") + "/drivers/chromedriver/chromedriver.exe";
-	//			System.setProperty("webdriver.chrome.driver", driverPath);
-	//			_driver = new ChromeDriver();
-	//		}
-	//		else if (browser.equalsIgnoreCase("firefox")) {
-	//			driverPath = System.getProperty("user.dir") + "/drivers/geckodriver/geckodriver.exe";
-	//			System.setProperty("webdriver.gecko.driver", driverPath);
-	//			_driver = new FirefoxDriver();
-	//		}
-	//		test.info(browser + " instance was open");
-	//		_driver.manage().window().maximize();
-	//		test.info("Window maximized");
-	//		page = new PageGenerator(_driver);		
-	//	}
-
-	public void generateReport() {
-		
-	}
-
-	
-
 	public BaseTest() {
 		PropertiesFile.getProperties();
 		if(browser.equalsIgnoreCase("chrome")) {
@@ -68,9 +38,6 @@ public class BaseTest {
 		}
 		_driver.manage().window().maximize();	
 	}
-
-
-
 
 	public void tearDown() {
 		_driver.quit();        
@@ -112,6 +79,4 @@ public class BaseTest {
 			report.info("Landed to " + currentUrl);
 		}
 	}
-
-
 }

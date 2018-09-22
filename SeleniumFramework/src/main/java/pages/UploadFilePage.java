@@ -1,7 +1,5 @@
 package pages;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -14,8 +12,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -31,9 +27,6 @@ public class UploadFilePage extends BaseTest {
 	//*******Page Objects*******	
 	By uploadAreaBy = By.xpath("//div[@id='flash-upload-container']/div/input");
 	private WebElement uploadArea;
-
-//	@FindBy(how = How.XPATH, using = "//span[@class='tree-view__loading-label']")
-//	private WebElement loadingSpinnerFolders;
 
 	static String xpathSelectFolderUploadTo;
 	private WebElement uploadToFolder;

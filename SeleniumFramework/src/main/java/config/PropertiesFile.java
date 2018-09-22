@@ -14,7 +14,7 @@ public class PropertiesFile {
 
 	public static void getProperties() {
 		try {
-			String propPath = System.getProperty("user.dir") + "/src/test/java/config/config.properties";
+			String propPath = System.getProperty("user.dir") + "/src/main/java/config/config.properties";
 			InputStream input = new FileInputStream(propPath);
 			prop.load(input);
 			BaseTest.browser = prop.getProperty("browser");
