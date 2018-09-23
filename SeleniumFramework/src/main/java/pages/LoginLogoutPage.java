@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,7 +18,7 @@ public class LoginLogoutPage extends BaseTest {
 		super(driver, test);
 		PageFactory.initElements(driver,  this);
 	}
-
+	
 	//*******Page Objects*******	
 	@FindBy(how = How.XPATH, using = "//div[@class='clearfix']//button[@type='submit']")
 	private WebElement signIn;

@@ -76,6 +76,8 @@ public class UploadFilePage extends BaseTest {
 			.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
 
 	public void waitForFoldersOnUploadDestinationModal() {
+		wait = new FluentWait<WebDriver>(_driver).withTimeout(Duration.ofSeconds(7))
+				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
 		try {
 			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='tree-view__group']//ul/li/span/span")));
 			report.pass("Tree-view with available folders for upload loaded");
